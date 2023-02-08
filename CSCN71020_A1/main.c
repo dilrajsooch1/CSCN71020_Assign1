@@ -3,36 +3,26 @@
 void printWelcomeMenu();
 void printOptions();
 void add();
-void subtract();
-
-
 
 
 void main() {
 
-    printWelcomeMenu();
+	printWelcomeMenu();
 
-    printOptions();
+	printOptions();
 
-    int inputNum;
+	int inputNum;
 
-    printf("Enter operation number: ");
-    scanf("%1o", &inputNum);
+	printf("Enter operation number: ");
+	scanf_s("%1o", &inputNum);
 
-    switch (inputNum) {
-        case 1:
-            add();
-            break;
-
-        case 2:
-            subtract();
-            break;
-    }
+	switch (inputNum)
+	{
+	case 1:
+		add();
+	}
 
 }
-
-
-
 
 void printWelcomeMenu() {
 	printf(" **********************\n");
@@ -47,30 +37,11 @@ void printOptions() {
 }
 
 void add() {
-	double num1, num2, num3, result;
+	double num1, num2, result;
 	printf("Enter the first value:");
-	scanf("%lf", &num1);
+	scanf_s("%lf", &num1);
 	printf("Enter the second value:");
-	scanf("%lf", &num2);
-	printf("Enter the third value:");
-	scanf("%lf", &num3);
-	result = num1 + num2+num3;
-	printf("%lf + %lf +%lf= %lf\n", num1, num2,num3,result);
+	scanf_s("%lf", &num2);
+	result = num1 + num2;
+	printf("%lf + %lf = %lf\n", num1, num2, result);
 }
-
-void subtract(){
-    double num1, num2, num3, result;
-    printf("Enter the first value:");
-    scanf("%lf", &num1);
-    printf("Enter the second value:");
-    scanf("%lf", &num2);
-    printf("Enter the third value:");
-    scanf("%lf", &num3);
-    result = num1 - num2-num3;
-    printf("%lf - %lf -%lf= %lf\n", num1, num2,num3,result);
-
-}
-
-
-
-
